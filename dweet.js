@@ -24,7 +24,7 @@
        ext.get_dweet = function(thing, key, callback) {
         // Make an AJAX call to dweet.io 
         $.ajax({
-              url: 'https://dweet.io/get/latest/dweet/for/'+thing+'?'+key+'='+value,
+              url: 'https://dweet.io/get/latest/dweet/for/'+thing+'?'+key,
               dataType: 'json',
               success: function( get_result ) {
                   // Got the data - parse it and return the temperature
