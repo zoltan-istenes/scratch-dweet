@@ -38,7 +38,7 @@
     var descriptor = {
         blocks: [
             ['R', 'send dweet for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
-            ['R', 'get dweet 3 for thing %s key %s', 'get_dweet', 'scratch_conf_2017', 'message' ]
+            ['R', 'get dweet 4 for thing %s key %s', 'get_dweet', 'scratch_conf_2017', 'message' ]
         ]
     };
 
