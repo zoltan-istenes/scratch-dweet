@@ -77,9 +77,9 @@
     var descriptor = {
         blocks: [
             ['R', 'send dweet 5 for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
-            ['R', 'get dweet for thing this %s key %s', 'get_dweetA', 'scratch_conf_2017', 'message' ]
-            ['R', 'get dweet for thing with %s key %s', 'get_dweetB', 'scratch_conf_2017', 'message' ]
-            ['R', 'get dweet for thing with thing %s key %s', 'get_dweetC', 'scratch_conf_2017', 'message' ]
+            ['R', 'get dweet for thing this %s key %s', 'get_dweetA', 'scratch_conf_2017', 'message' ],
+            ['R', 'get dweet for thing with %s key %s', 'get_dweetB', 'scratch_conf_2017', 'message' ],
+            ['R', 'get dweet for thing with thing %s key %s', 'get_dweetC', 'scratch_conf_2017', 'message' ],
             ['R', 'get dweet for thing with content message %s key %s', 'get_dweetD', 'scratch_conf_2017', 'message' ]
         ]
     };
