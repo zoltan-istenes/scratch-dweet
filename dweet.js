@@ -12,7 +12,7 @@
         // Make an AJAX call to the Open Weather Maps API
         $.ajax({
               url: 'https://dweet.io/dweet/for/scratch_conf_2017?hello='+location,
-              dataType: 'jsonp',
+              dataType: 'json',
               success: function( weather_data ) {
                   // Got the data - parse it and return the temperature
                   temperature = weather_data['this'];
