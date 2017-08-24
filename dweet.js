@@ -21,10 +21,24 @@
         });
     };
 
+       ext.get_dweet = function(thing, key, callback) {
+        // Make an AJAX call to dweet.io 
+        $.ajax({
+              url: 'https://dweet.io/get/latest/dweet/for/'+thing+'?'+key+'='+value,
+              dataType: 'json',
+              success: function( get_result ) {
+                  // Got the data - parse it and return the temperature
+                  value = get_result['with']['content'];
+                  callback(value);
+              }
+        });
+    };
+    
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['R', 'Dweet for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
+            ['R', 'send dweet for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
+            ['R', 'get dweet for thing %s key %s', 'get_dweet', 'scratch_conf_2017', 'message' ],
         ]
     };
 
