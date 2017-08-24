@@ -8,15 +8,15 @@
         return {status: 2, msg: 'Ready'};
     };
 
-    ext.get_temp = function(location, callback) {
-        // Make an AJAX call to the Open Weather Maps API
+    ext.send_dweet = function(thing, key, value, callback) {
+        // Make an AJAX call to dweet.io 
         $.ajax({
-              url: 'https://dweet.io/dweet/for/scratch_conf_2017?hello='+location,
+              url: 'https://dweet.io/dweet/for/'+thing+'?'+key+'='+value,
               dataType: 'json',
-              success: function( weather_data ) {
+              success: function( get_result ) {
                   // Got the data - parse it and return the temperature
-                  temperature = weather_data['this'];
-                  callback(temperature);
+                  result = get_result['this'];
+                  callback(result);
               }
         });
     };
@@ -24,10 +24,10 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['R', 'current temperature in city %s', 'get_temp', 'Boston, MA'],
+            ['R', 'Dweet for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
         ]
     };
 
     // Register the extension
-    ScratchExtensions.register('Weather extension', descriptor, ext);
+    ScratchExtensions.register('dweet.io extension', descriptor, ext);
 })({});
