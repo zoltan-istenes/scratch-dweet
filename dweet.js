@@ -28,7 +28,7 @@
               dataType: 'json',
               success: function( get_result ) {
                   // Got the data - parse it and return the temperature
-                  value = get_result['with']['content']['message'];
+                  value = get_result['with'];
                   callback(value);
               }
         });
@@ -38,7 +38,7 @@
     var descriptor = {
         blocks: [
             ['R', 'send dweet for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
-            ['R', 'get 1 dweet for thing %s key %s', 'get_dweet', 'scratch_conf_2017', 'message' ]
+            ['R', 'get dweet 2 for thing %s key %s', 'get_dweet', 'scratch_conf_2017', 'message' ]
         ]
     };
 
