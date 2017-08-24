@@ -68,7 +68,7 @@
               success: function( get_result ) {
                   // Got the data - parse it and return the temperature
                   value = get_result['with[3].content'];
-                  callback(value.message);
+                  callback(value);
               }
         });
     };
