@@ -54,7 +54,7 @@
               dataType: 'json',
               success: function( get_result ) {
                   // Got the data - parse it and return the temperature
-                  value = get_result.with[0].content.key;
+                  value = get_result.with[0].content.[key];
                   callback(value);
               }
         });
@@ -79,7 +79,7 @@
             ['R', 'send dweet 15 for thing %s key %s value %s', 'send_dweet', 'scratch_conf_2017', 'message', 'hello' ],
             ['R', 'get dweet for thing this %s key %s', 'get_dweetA', 'scratch_conf_2017', 'message' ],
             ['R', 'get dweet for thing JSON stringify with %s key %s', 'get_dweetB', 'scratch_conf_2017', 'message' ],
-            ['R', 'get dweet for thing with 0 1 content %s key %s', 'get_dweetC', 'scratch_conf_2017', 'message' ],
+            ['R', 'get dweet for thing with 0 1 key %s key %s', 'get_dweetC', 'scratch_conf_2017', 'message' ],
             ['R', 'get dweet for thing with 0 1 created %s key %s', 'get_dweetD', 'scratch_conf_2017', 'message' ]
         ]
     };
