@@ -21,7 +21,7 @@ xhr.send();}
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['R', 'http post %s', 'httpPost','http://kyleplogames.com/test.txt'],
+            ['R', 'http post %s', 'httpPost','https://zoltan-istenes.github.io/scratch-dweet/'],
         ]
     };
 
